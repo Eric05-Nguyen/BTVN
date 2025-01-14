@@ -1,0 +1,35 @@
+package exercise_hw;
+
+import java.util.Scanner;
+
+public class GiaiPtBac2 {
+
+    public static void main(String[] args) {
+        Scanner nhap = new Scanner(System.in);
+        double a, b, c;
+        System.out.println(" nhap gia tri a:");
+        a = nhap.nextDouble();
+        System.out.println(" nhap gia tri b:");
+        b = nhap.nextDouble();
+        System.out.println(" nhap gia tri c:");
+        c = nhap.nextDouble();
+        if (a == 0) {
+            if (b != 0) {
+                System.out.println("PT co 1 nghiem: x=-c/b =" + (-c / b));
+            } else {
+                System.out.println("PT vo nghiem");
+            }
+        } else {
+            double delta = b * b - 4 * a * c;
+            if (delta == 0) {
+                System.out.println("PT co nghiem kep la : x=-b/(2*a) =" + (-b / (2 * a)));
+            } else if (delta > 0) {
+                System.out.println("Pt co nghiem x1 =" + Math.round((-b - Math.sqrt(delta)) / (2 * a) * 100.0) / 100.0);
+                System.out.println("Pt co nghiem x2 =" + Math.round((-b + Math.sqrt(delta)) / (2 * a) * 100.0) / 100.0);
+            } else {
+                System.out.println("Pt vo nghiem");
+            }
+        }
+    }
+
+}

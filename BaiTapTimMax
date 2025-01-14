@@ -1,0 +1,28 @@
+package exercise_hw;
+
+import java.util.Scanner;
+
+public class BTVN_B5 {
+
+    public static void main(String[] args) {
+        Scanner nhap = new Scanner(System.in);
+        int a, b, c, max;
+        System.out.println("Nhap gia tri nguyen a :");
+        a = nhap.nextInt();
+        System.out.println("Nhap gia tri nguyen b :");
+        b = nhap.nextInt();
+        System.out.println("Nhap gia tri nguyen c :");
+        c = nhap.nextInt();
+        if (a > b && a > c) {
+            max = a;
+            System.out.println("So lon nhat la : " + max);
+        } else if (c > b) {
+            max = c;
+            System.out.println("So lon nhat la : " + max);
+        } else {
+            max = b;
+            System.out.println("So lon nhat la : " + max);
+
+        }
+    }
+}
